@@ -139,11 +139,11 @@ const Quiz = () => {
         }
       );
       toast.success('Joined quiz successfully!');
+      await loadAllQuizzes();
       setNameDialogOpen(false);
       setUserJoined(true);
       setTimer(30);
       setQuizStarted(true); // Start the quiz and timer
-      loadAllQuizzes();
     } catch (err) {
       console.log(err);
       toast.error(
