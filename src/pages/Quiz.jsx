@@ -143,6 +143,7 @@ const Quiz = () => {
       setUserJoined(true);
       setTimer(30);
       setQuizStarted(true); // Start the quiz and timer
+      loadAllQuizzes();
     } catch (err) {
       console.log(err);
       toast.error(
@@ -153,7 +154,6 @@ const Quiz = () => {
 
   const handleSubmitQuiz = async () => {
     setIsSubmitting(true); // Start submission process
-    loadAllQuizzes();
 
     try {
       const response = await axios.post(
@@ -171,12 +171,8 @@ const Quiz = () => {
       );
 
       const qid = response.data.quizId;
-      console.log(qid);
-
       const quizIndex = quizQids.indexOf(qid);
-      console.log(quizIndex);
-
-      const plusOneIndex = quizIndex;
+      const plusOneIndex = quizIndex + 1;
       const score = response.data.score;
 
       if (score <= 0) {
