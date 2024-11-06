@@ -153,6 +153,8 @@ const Quiz = () => {
 
   const handleSubmitQuiz = async () => {
     setIsSubmitting(true); // Start submission process
+    loadAllQuizzes();
+
     try {
       const response = await axios.post(
         '/api/quiz/submit',
