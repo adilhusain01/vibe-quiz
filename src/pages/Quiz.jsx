@@ -171,8 +171,12 @@ const Quiz = () => {
       );
 
       const qid = response.data.quizId;
+      console.log(qid);
+
       const quizIndex = quizQids.indexOf(qid);
-      const plusOneIndex = quizIndex + 1;
+      console.log(quizIndex);
+
+      const plusOneIndex = quizIndex;
       const score = response.data.score;
 
       if (score <= 0) {
