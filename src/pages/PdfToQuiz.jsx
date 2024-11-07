@@ -46,7 +46,7 @@ const PdfToQuiz = () => {
   const [quizIds, setQuizIds] = useState([]);
   const [quizQids, setQuizQids] = useState([]);
 
-  const CONTRACT_ADDRESS = '0x204533Dd6e6E53fb823f83E079018aB482779C93';
+  const CONTRACT_ADDRESS = '0x0eb3388E616FF7Fd796Efa01f02666e66CF2d38F';
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -427,7 +427,7 @@ const PdfToQuiz = () => {
                     onChange={handleChange}
                     className='w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-red-200 focus:outline-none focus:ring-2 focus:ring-red-400'
                     placeholder='Reward per score'
-                    min='1'
+                    min='0.0001'
                     required
                   />
                 </div>

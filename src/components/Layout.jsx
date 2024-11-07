@@ -6,7 +6,7 @@ const Footer = lazy(() => import('./Footer'));
 
 const Layout = () => {
   return (
-    <main className='flex flex-col bg-gradient-to-br from-red-900 via-red-800 to-red-900'>
+    <main className='flex flex-col'>
       <Header />
       <Outlet />
       <Footer />

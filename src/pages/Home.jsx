@@ -60,11 +60,48 @@ const Home = () => {
 
           {/* Quiz Actions Section */}
           <div className='space-y-6'>
+
+            {/* Create Quiz Options */}
+            <div className='bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 shadow-xl hover:bg-white/20 transition-all duration-300'>
+              <h2 className='text-4xl font-semibold text-white mb-4'>
+                Create a Quiz
+              </h2>
+              <div className='grid grid-cols-2 gap-4 '>
+                <Link
+                  to='/pdfToQuiz'
+                  className='group bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 shadow-xl hover:bg-white/20 transition-all duration-300'
+                >
+                  <div className='flex flex-col items-center space-y-3'>
+                    <div className='w-12 h-12 rounded-full bg-gradient-to-r from-red-500 to-pink-500 flex items-center justify-center group-hover:scale-110 transition-transform'>
+                      <FileText size={24} className='text-white' />
+                    </div>
+                    <span className='text-lg font-semibold text-white'>
+                      PDF to Quiz
+                    </span>
+                  </div>
+                </Link>
+
+                <Link
+                  to='/promptToQuiz'
+                  className='group bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 shadow-xl hover:bg-white/20 transition-all duration-300'
+                >
+                  <div className='flex flex-col items-center space-y-3'>
+                    <div className='w-12 h-12 rounded-full bg-gradient-to-r from-red-500 to-pink-500 flex items-center justify-center group-hover:scale-110 transition-transform'>
+                      <BookOpen size={24} className='text-white' />
+                    </div>
+                    <span className='text-lg font-semibold text-white'>
+                      Prompt to Quiz
+                    </span>
+                  </div>
+                </Link>
+              </div>
+            </div>
+
             {/* Join Quiz Card */}
             <div className='bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 shadow-xl'>
-              <h3 className='text-lg font-semibold text-white mb-4'>
+              <h2 className='text-4xl font-semibold text-white mb-4'>
                 Join a Quiz
-              </h3>
+              </h2>
               <div className='flex gap-2'>
                 <input
                   type='text'
@@ -81,37 +118,6 @@ const Home = () => {
                   Join
                 </button>
               </div>
-            </div>
-
-            {/* Create Quiz Options */}
-            <div className='grid grid-cols-2 gap-4'>
-              <Link
-                to='/pdfToQuiz'
-                className='group bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 shadow-xl hover:bg-white/20 transition-all duration-300'
-              >
-                <div className='flex flex-col items-center space-y-3'>
-                  <div className='w-12 h-12 rounded-full bg-gradient-to-r from-red-500 to-pink-500 flex items-center justify-center group-hover:scale-110 transition-transform'>
-                    <FileText size={24} className='text-white' />
-                  </div>
-                  <span className='text-lg font-semibold text-white'>
-                    PDF to Quiz
-                  </span>
-                </div>
-              </Link>
-
-              <Link
-                to='/promptToQuiz'
-                className='group bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 shadow-xl hover:bg-white/20 transition-all duration-300'
-              >
-                <div className='flex flex-col items-center space-y-3'>
-                  <div className='w-12 h-12 rounded-full bg-gradient-to-r from-red-500 to-pink-500 flex items-center justify-center group-hover:scale-110 transition-transform'>
-                    <BookOpen size={24} className='text-white' />
-                  </div>
-                  <span className='text-lg font-semibold text-white'>
-                    Prompt to Quiz
-                  </span>
-                </div>
-              </Link>
             </div>
           </div>
 
@@ -134,6 +140,7 @@ const Home = () => {
 
         <div className='relative h-[800px]'>
           <AnimatedBackground />
+          
         </div>
       </div>
     </div>

@@ -36,7 +36,7 @@ const Quiz = () => {
   const [error, setError] = useState('');
   const [message, setMessage] = useState('');
 
-  const CONTRACT_ADDRESS = '0x204533Dd6e6E53fb823f83E079018aB482779C93';
+  const CONTRACT_ADDRESS = '0x0eb3388E616FF7Fd796Efa01f02666e66CF2d38F';
 
   useEffect(() => {
     const fetchQuiz = async () => {

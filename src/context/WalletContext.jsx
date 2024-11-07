@@ -76,7 +76,7 @@ const WalletProvider = ({ children }) => {
       try {
         await window.ethereum.request({
           method: 'wallet_switchEthereumChain',
-          params: [{ chainId: '0x528' }],
+          params: [{ chainId: '0xe705' }],
         });
 
         await checkAndSetNetwork();
@@ -94,15 +94,15 @@ const WalletProvider = ({ children }) => {
               method: 'wallet_addEthereumChain',
               params: [
                 {
-                  chainId: '0x528',
-                  chainName: 'AIA',
-                  rpcUrls: ['https://aia-dataseed1-testnet.aiachain.org'],
+                  chainId: '0xe705',
+                  chainName: 'Linea Sepolia',
+                  rpcUrls: ['https://linea-sepolia.infura.io/v3/'],
                   nativeCurrency: {
-                    name: 'AIA',
-                    symbol: 'AIA',
+                    name: 'ETH',
+                    symbol: 'ETH',
                     decimals: 18,
                   },
-                  blockExplorerUrls: ['https://testnet.aiascan.com/'],
+                  blockExplorerUrls: ['https://sepolia.lineascan.build/'],
                 },
               ],
             });
